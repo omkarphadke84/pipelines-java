@@ -16,7 +16,7 @@ steps:
 - task: AzureWebApp@1
   inputs:
     appType: 'webAppLinux'
-    appName: 'java-test-app'
+    appName: 'my-testapp-omkar384'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
