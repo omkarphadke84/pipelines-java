@@ -13,6 +13,11 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
+- task: AzureWebApp@1
+  inputs:
+    appType: 'webAppLinux'
+    appName: 'java-test-app'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
